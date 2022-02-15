@@ -1,0 +1,118 @@
+/* Наша команда */
+
+.section-team {
+  background-color: var(--button-bg-color);
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+
+    @include mq(tablet) {
+      flex-wrap: wrap;
+      flex-direction: row;
+    }
+
+    @include mq(desktop) {
+      flex-wrap: nowrap;
+      flex-direction: row;
+    }
+  }
+}
+
+.team {
+  &__list-item {
+    border-radius: 0px 0px 4px 4px;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+      0px 2px 1px rgba(0, 0, 0, 0.2);
+
+    @include mq(mobile-only) {
+      margin-bottom: 30px;
+      &:last-child {
+        margin-bottom: 0px;
+      }
+    }
+    @include mq(tablet-only) {
+      &:nth-child(2n + 1) {
+        margin-right: 30px;
+      }
+
+      &:nth-child(-n + 2) {
+        margin-bottom: 30px;
+      }
+    }
+
+    @include mq(desktop) {
+      margin-right: 30px;
+      margin-bottom: 0px;
+      &:last-child {
+        margin-right: 0px;
+      }
+    }
+
+    max-width: 450px;
+
+    @include mq(tablet) {
+      width: 354px;
+    }
+
+    @include mq(desktop) {
+      width: 270px;
+    }
+  }
+}
+.person {
+  background-color: var(--secondary-text-color);
+  padding: 30px 0px;
+
+  &__name {
+    margin-bottom: 10px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.2;
+    text-align: center;
+    letter-spacing: 0.03em;
+  }
+
+  &__profession {
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 1.2;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: var(--extra-text-color);
+  }
+
+  &__socials {
+    display: flex;
+    justify-content: center;
+    margin-top: 16px;
+  }
+  &__socials li {
+    margin-right: 10px;
+  }
+  &__socials a {
+    display: block;
+    width: 44px;
+    height: 44px;
+    padding: 12px;
+    border-radius: 50%;
+    transition-property: background-color;
+    transition-duration: 250ms;
+    transition-timing-function: var(--time-function);
+    &:hover,
+    &:focus {
+      background-color: var(--focus-color);
+    }
+    &:hover svg,
+    &:focus svg {
+      fill: var(--secondary-text-color);
+    }
+  }
+
+  &__socials svg {
+    fill: #afb1b8;
+    transition-property: fill;
+    transition-duration: 250ms;
+    transition-timing-function: var(--time-function);
+  }
+}

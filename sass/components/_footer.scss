@@ -1,0 +1,206 @@
+/* Стили футтера */
+.footer {
+  background-color: var(--hero-footer-bg-color);
+}
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  // align-items: baseline;
+
+  @include mq(tablet) {
+    align-items: baseline;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  @include mq(desktop) {
+    flex-direction: row;
+    align-items: baseline;
+  }
+
+  padding: 60px 0px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.footer-adress-wrapper {
+  text-align: center;
+  margin-bottom: 60px;
+
+  @include mq(desktop) {
+    text-align: start;
+  }
+}
+.footer-contacts-logo {
+  font-family: Raleway, sans-serif;
+  font-weight: bold;
+  font-size: 26px;
+  line-height: 1.2;
+  letter-spacing: 0.03em;
+  color: var(--secondary-text-color);
+}
+.footer-contacts {
+  margin-top: 20px;
+}
+.footer-contacts-list-item {
+  margin-bottom: 9px;
+}
+.footer-contacts-list-item:last-child {
+  margin-bottom: 0px;
+}
+.footer-contacts-adress {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 1.8;
+  letter-spacing: 0.03em;
+  color: var(--secondary-text-color);
+}
+.footer-contacts-link {
+  font-family: Roboto, sans-serif;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 1.8;
+  letter-spacing: 0.03em;
+  color: var(--footer-contacts-color);
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: var(--time-function);
+}
+.footer-contacts-link:focus,
+.footer-contacts-link:hover {
+  color: var(--focus-color);
+}
+/* Соц сети в футере */
+.footer-socials {
+  text-align: center;
+  margin-bottom: 60px;
+
+  @include mq(desktop) {
+    margin-left: 70px;
+    text-align: start;
+  }
+}
+.socials-link {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.socials-link svg {
+  fill: var(--secondary-text-color);
+}
+
+.footer-socials h2 {
+  font-family: Roboto, sans-serif;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.2;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--secondary-text-color);
+}
+
+/* Стили формы в фурете */
+
+.type-email {
+  width: 570px;
+  text-align: center;
+
+  @include mq(desktop) {
+    text-align: start;
+    margin-left: 93px;
+  }
+}
+
+.type-email form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include mq(desktop) {
+    flex-direction: row;
+    align-items: normal;
+  }
+}
+
+.type-email p {
+  display: inline-block;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.2;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  color: var(--secondary-text-color);
+
+  margin-bottom: 20px;
+}
+
+.type-email input {
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+
+  width: 358px;
+  height: 50px;
+
+  padding: 15px 16px;
+
+  color: rgba(255, 255, 255, 0.6);
+
+  margin-bottom: 20px;
+}
+
+.type-email input:focus-visible {
+  outline: none;
+}
+
+.type-email input::placeholder {
+  font-family: inherit;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.2;
+  letter-spacing: 0.03em;
+}
+
+.type-email input {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.type-email svg {
+  width: 24px;
+  height: 24px;
+
+  fill: var(--secondary-text-color);
+
+  margin-left: 10px;
+}
+
+.type-email button {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 200px;
+  height: 50px;
+
+  background-color: var(--focus-color);
+
+  padding: 0px 0px;
+  margin-left: 12px;
+
+  border-radius: 4px;
+  border-color: transparent;
+
+  font-family: Roboto;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.8;
+  text-align: center;
+  letter-spacing: 0.06em;
+
+  color: var(--secondary-text-color);
+
+  cursor: pointer;
+}
